@@ -1,0 +1,22 @@
+.wrapper11 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.inputWrapper11 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.plot1 {
+    margin: 60px 40px 60px 90px
+}
+
+.plot2 {
+    margin: 60px 40px 60px 90px
+}
