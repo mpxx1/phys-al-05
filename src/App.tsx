@@ -78,7 +78,7 @@ function App() {
                     >
 
                         <Heading
-                            title={"Clojure"}
+                            title={"Open"}
                         ></Heading>
 
                         <Axis
@@ -99,7 +99,7 @@ function App() {
                             data={ data1 }
                             xAxis="x"
                             yAxis="y"
-                            label={"Clojure"}
+                            label={"Open"}
                             lineStyle={{ strokeWidth: 3 }}
                             displayMarkers={false}
                         />
@@ -116,7 +116,7 @@ function App() {
                     >
 
                         <Heading
-                            title={"Clojure"}
+                            title={"Closed"}
                         ></Heading>
 
                         <Axis
@@ -137,7 +137,7 @@ function App() {
                             data={ data2 }
                             xAxis="x"
                             yAxis="y"
-                            label={"Disconnection"}
+                            label={"Closed"}
                             lineStyle={{ strokeWidth: 3 }}
                             displayMarkers={false}
                         />
