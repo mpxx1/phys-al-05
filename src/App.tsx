@@ -37,6 +37,7 @@ function App() {
         }
     } else {
         alert("inductance and resistance must be >0")
+        return
     }
 
 
