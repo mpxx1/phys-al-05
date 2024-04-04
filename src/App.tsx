@@ -29,10 +29,14 @@ function App() {
     const resistanceData = Number.parseFloat(resistance);
     const emfData = Number.parseFloat(emf);
 
-    for (let i = 0; i < 10; i += 0.1) {
+    if (inductanceData < 0 && resistanceData < 0) {
+        for (let i = 0; i < 10; i += 0.1) {
 
-        data1.push({ x: i, y: f1(i, inductanceData, resistanceData, emfData) })
-        data2.push({ x: i, y: f2(i, inductanceData, resistanceData, emfData) })
+            data1.push({ x: i, y: f1(i, inductanceData, resistanceData, emfData) })
+            data2.push({ x: i, y: f2(i, inductanceData, resistanceData, emfData) })
+        }
+    } else {
+        alert("inductance and resistance must be >0")
     }
 
 
@@ -43,7 +47,7 @@ function App() {
                 <div>
                     <label> Enter values to see the plots </label>
                     <input
-                        placeholder={"Inductance"}
+                        placeholder={"Inductance, H"}
                         value={inductance}
                         onChange={(event) => setInductance(event.target.value)}
                     />
@@ -51,7 +55,7 @@ function App() {
 
                 <div>
                     <input
-                        placeholder={"Resistance"}
+                        placeholder={"Resistance, Ω"}
                         value={resistance}
                         onChange={(event) => setResistance(event.target.value)}
 
@@ -60,7 +64,7 @@ function App() {
 
                 <div>
                     <input
-                        placeholder={"Emf"}
+                        placeholder={"Emf, V"}
                         value={emf}
                         onChange={(event) => setEmf(event.target.value)}
 
