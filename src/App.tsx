@@ -29,14 +29,11 @@ function App() {
     const resistanceData = Number.parseFloat(resistance);
     const emfData = Number.parseFloat(emf);
 
-    if (inductanceData > 0 && resistanceData > 0) {
+    if (inductanceData < 0 || resistanceData < 0) alert("inductance and resistance must be >0") 
         
-        for (let i = 0; i < 10; i += 0.1) {
-            data1.push({ x: i, y: f1(i, inductanceData, resistanceData, emfData) })
-            data2.push({ x: i, y: f2(i, inductanceData, resistanceData, emfData) })
-        }
-    } else {
-        alert("inductance and resistance must be >0")
+    for (let i = 0; i < 10; i += 0.1) {
+        data1.push({ x: i, y: f1(i, inductanceData, resistanceData, emfData) })
+        data2.push({ x: i, y: f2(i, inductanceData, resistanceData, emfData) })
     }
 
 
